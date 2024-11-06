@@ -10,11 +10,11 @@ public class Maze {
     private HashMap<Integer, Room> roomHashMap;
     private AtomicInteger counter;
 
-    Maze() {
+    public Maze() {
         this.roomHashMap = new HashMap<>();
         this.counter = new AtomicInteger(0);
     }
-    void addRoom(Room room) {
+    public void addRoom(Room room) {
          this.roomHashMap.put(counter.getAndIncrement(), room);
     }
     Room getRoom(int roomNumber){
